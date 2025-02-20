@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: pink;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .flashcard {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .flashcard.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .title {
+    color: #611048;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    background-color: rgb(237, 233, 237);
+    font-size: 35px;
+    font-style: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .back {
+    background-color: rgb(229, 216, 229);
+    transform: rotateY(180deg);
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .flipBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(187, 63, 145);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .flipBtn:hover {
+    background-color: rgb(155, 50, 120);
+  }
+  
+  .flipBtn:active {
+    transform: scale(0.95);
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 250px;
+    padding-top: 70px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(187, 63, 145);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: rgb(155, 50, 120);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  #progressBar {
+    width: 50%;
+    background-color: #611048;
+    border-radius: 10px;
+    margin-top: 35px;
+    
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 100%;
+    background-color: #fc8eac;
+    text-align: center; 
+    line-height: 30px; 
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+  }
